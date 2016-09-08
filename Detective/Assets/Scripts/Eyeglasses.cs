@@ -25,6 +25,8 @@ public class Eyeglasses : MonoBehaviour {
 			wear=!wear;
 		if (curbattery > 0 && wear) {
 			Battery_discharge ();
+		} else {
+			wear = false;
 		}
 		if (curbattery < maxbattery && !wear)
 			Battery_charge (charge_speed);

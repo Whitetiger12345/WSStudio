@@ -12,6 +12,7 @@ public class OpenExitCar : MonoBehaviour {
 	public GameObject CarCamera;
 	public GameObject PlayerCamera;
 	public GameObject Exit;
+	public GameObject CamP, CamC;
 	
 	void Start (){
 		gameObject.GetComponent<CarController>().enabled = false;
@@ -46,6 +47,7 @@ void Update (){
 	   CarCamera.SetActive (true);
 	   PlayerCamera.SetActive (false);
 	   inCar=true;
+	   CamP.tag = "Untagged";CamC.tag = "MainCamera";
    }
 
 }
@@ -64,6 +66,7 @@ void Update (){
 					gameObject.GetComponent<CarAudio> ().enabled = false;
 					CarCamera.SetActive (false);
 					PlayerCamera.SetActive (true);
+					CamP.tag = "MainCamera";CamC.tag = "Untagged";
 				}
 	} else {
 				on_lights = false;	

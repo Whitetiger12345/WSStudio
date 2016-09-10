@@ -63,6 +63,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Scripts\Eyeglasses.cs" />
      <Compile Include="Assets\Scripts\FindClue.cs" />
+     <Compile Include="Assets\Scripts\FirstPerson.cs" />
      <Compile Include="Assets\Scripts\OpenExitCar.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

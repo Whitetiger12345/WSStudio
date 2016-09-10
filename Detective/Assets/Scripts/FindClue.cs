@@ -6,6 +6,7 @@ public class FindClue : MonoBehaviour {
 	public Eyeglasses glasses;
 	// Use this for initialization
 	void Start () {
+		S_Target = GameObject.FindGameObjectWithTag ("Clue");
 		Target = null;
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		glasses = Player.GetComponent<Eyeglasses> ();
@@ -29,6 +30,8 @@ public class FindClue : MonoBehaviour {
 				Debug.Log ("Clue" + Target.name);
 
 			}
+		} else {
+			S_Target.GetComponent<Renderer> ().material.color = Color.white;
 		}
 	}
 }

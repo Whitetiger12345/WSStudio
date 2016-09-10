@@ -7,8 +7,8 @@ namespace UnityStandardAssets.Vehicles.Car
 public class OpenExitCar : MonoBehaviour {
 	
 	public bool Player;
-	public GameObject PolicMan;
-	public bool inCar;
+	public GameObject Detective,lights;
+	public bool inCar,on_lights;
 	public GameObject CarCamera;
 	public GameObject PlayerCamera;
 	public GameObject Exit;
@@ -39,7 +39,7 @@ void OnTriggerExit(Collider other){
 void Update (){
 	if (Player==true){
    if (Input.GetKeyUp(KeyCode.E)){
-	   PolicMan.SetActive (false);
+	   Detective.SetActive (false);
 	   gameObject.GetComponent<CarController>().enabled = true;
 	   gameObject.GetComponent<CarUserControl>().enabled = true;
 	   gameObject.GetComponent<CarAudio>().enabled = true;
@@ -49,19 +49,26 @@ void Update (){
    }
 
 }
-if (inCar==true){
-	if (Input.GetKeyDown(KeyCode.E)){
+			if (inCar == true) {
+				if (Input.GetKeyDown (KeyCode.L)) {
+					on_lights = !on_lights;
+					lights.SetActive (on_lights);		
+				}
+				if (Input.GetKeyDown (KeyCode.E)) {
 					
-		PolicMan.SetActive (true);
-		PolicMan.transform.position=Exit.transform.position;
-		inCar=false;
-		gameObject.GetComponent<CarController>().enabled = false;
-	   gameObject.GetComponent<CarUserControl>().enabled = false;
-	   gameObject.GetComponent<CarAudio>().enabled = false;
-	   CarCamera.SetActive (false);
-	   PlayerCamera.SetActive (true);
-	}
-}
+					Detective.SetActive (true);
+					Detective.transform.position = Exit.transform.position;
+					inCar = false;
+					gameObject.GetComponent<CarController> ().enabled = false;
+					gameObject.GetComponent<CarUserControl> ().enabled = false;
+					gameObject.GetComponent<CarAudio> ().enabled = false;
+					CarCamera.SetActive (false);
+					PlayerCamera.SetActive (true);
+				}
+	} else {
+				on_lights = false;	
+				lights.SetActive (on_lights);
+		}
 }
 }
 

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Mesh_QuantumMetaCloud_3-Mat
+  m_Shader: {fileID: 4800000, guid: 2ca744dfa1037e54ca67a3a999acd46c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 5bbb5d2c7f079a84885debacdef5d356, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CloudTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 5bbb5d2c7f079a84885debacdef5d356, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _CloudContrast
+        second: 1.26
+      data:
+        first:
+          name: _Bias
+        second: 0.5239034
+      data:
+        first:
+          name: _AlphaCutoff
+        second: 0
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
+      data:
+        first:
+          name: _AmbientColor
+        second: {r: 0.14925373, g: 0.1476336, b: 0.12029405, a: 1}
+      data:
+        first:
+          name: _SunColor
+        second: {r: 0.7910448, g: 0.71088135, b: 0.56081533, a: 1}
+--- !u!1002 &2100001
+EditorExtensionImpl:
+  serializedVersion: 6

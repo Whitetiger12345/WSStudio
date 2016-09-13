@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Clue
+  - Move
   layers:
   - Default
   - TransparentFX

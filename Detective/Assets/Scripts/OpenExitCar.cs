@@ -38,36 +38,41 @@ void OnTriggerExit(Collider other){
 	}
 }
 void Update (){
-	if (Player==true){
-   if (Input.GetKeyUp(KeyCode.E)){
-	   Detective.SetActive (false);
-	   gameObject.GetComponent<CarController>().enabled = true;
-	   gameObject.GetComponent<CarUserControl>().enabled = true;
-	   gameObject.GetComponent<CarAudio>().enabled = true;
-	   CarCamera.SetActive (true);
-	   PlayerCamera.SetActive (false);
-	   inCar=true;
-	   CamP.tag = "Untagged";CamC.tag = "MainCamera";
-   }
-
-}
-			if (inCar == true) {
-				if (Input.GetKeyDown (KeyCode.L)) {
-					on_lights = !on_lights;
-					lights.SetActive (on_lights);		
-				}
+		if (Player==true || inCar){
 				if (Input.GetKeyDown (KeyCode.E)) {
-					
-					Detective.SetActive (true);
+					inCar = !inCar; 
 					Detective.transform.position = Exit.transform.position;
-					inCar = false;
-					gameObject.GetComponent<CarController> ().enabled = false;
-					gameObject.GetComponent<CarUserControl> ().enabled = false;
-					gameObject.GetComponent<CarAudio> ().enabled = false;
-					CarCamera.SetActive (false);
-					PlayerCamera.SetActive (true);
-					CamP.tag = "MainCamera";CamC.tag = "Untagged";
 				}
+		}
+
+
+		if (!inCar) {
+			Detective.SetActive (true);
+			
+			inCar = false;
+			gameObject.GetComponent<CarController> ().enabled = false;
+			gameObject.GetComponent<CarUserControl> ().enabled = false;
+			gameObject.GetComponent<CarAudio> ().enabled = false;
+			CarCamera.SetActive (false);
+			PlayerCamera.SetActive (true);
+			CamP.tag = "MainCamera";
+			CamC.tag = "Untagged";
+		}
+		
+		if (inCar == true) {
+			Detective.SetActive (false);
+			gameObject.GetComponent<CarController>().enabled = true;
+			gameObject.GetComponent<CarUserControl>().enabled = true;
+			gameObject.GetComponent<CarAudio>().enabled = true;
+			CarCamera.SetActive (true);
+			PlayerCamera.SetActive (false);
+			inCar=true;
+			CamP.tag = "Untagged";CamC.tag = "MainCamera";
+			if (Input.GetKeyDown (KeyCode.L)) {
+			on_lights = !on_lights;
+			lights.SetActive (on_lights);		
+		}
+			
 	} else {
 				on_lights = false;	
 				lights.SetActive (on_lights);

@@ -5,7 +5,7 @@ public class Eyeglasses : MonoBehaviour {
 	public bool wear;
 	public int maxbattery,curbattery,start;
 	public float charge_speed;
-	public Texture glasses;
+	public Texture glasses,crosshair;
 	public Texture[] Battery;
 	private float time;
 	// Use this for initialization
@@ -59,6 +59,7 @@ public class Eyeglasses : MonoBehaviour {
 		
 		if (wear) {
 			GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), glasses);
+			GUI.DrawTexture (new Rect (Input.mousePosition.x-25, Input.mousePosition.y-50, 50, 50), crosshair);
 			GUI.Label (new Rect(Screen.width/1.12f,20,100,100),"Detective Glasses v1.0");
 
 		}

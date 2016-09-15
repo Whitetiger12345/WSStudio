@@ -62,8 +62,10 @@
      <Compile Include="Assets\Model\Home\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\Model\Home\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Scripts\CoverWall.cs" />
+     <Compile Include="Assets\Scripts\Effects\Effect.cs" />
      <Compile Include="Assets\Scripts\Eyeglasses.cs" />
      <Compile Include="Assets\Scripts\FindClue.cs" />
+     <Compile Include="Assets\Scripts\Fire.cs" />
      <Compile Include="Assets\Scripts\FirstPerson.cs" />
      <Compile Include="Assets\Scripts\MiniMapScripts\GUIManager.cs" />
      <Compile Include="Assets\Scripts\MiniMapScripts\Minimap.cs" />

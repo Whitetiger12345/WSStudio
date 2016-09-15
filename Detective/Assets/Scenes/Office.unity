@@ -23274,6 +23274,7 @@ GameObject:
   - 114: {fileID: 1712201300}
   - 114: {fileID: 1712201301}
   - 65: {fileID: 1712201302}
+  - 114: {fileID: 1712201303}
   m_Layer: 0
   m_Name: ThirdPersonController
   m_TagString: Player
@@ -23438,6 +23439,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.41, z: 0.42}
   m_Center: {x: 0, y: 1.16, z: 0.46}
+--- !u!114 &1712201303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712201292}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8372d8354e90fda4c8bc48b950849aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cam: {fileID: 1765556612}
+  Decal: {fileID: 158194, guid: 53b395d95a58ece4d815a78312c3bff0, type: 2}
 --- !u!1001 &1713219284
 Prefab:
   m_ObjectHideFlags: 0
